@@ -7,21 +7,25 @@ So i've added a Sleep() function "stolen" from nickgammon website to put arduino
 When you raise SDN at HIGH logical level the chip goes in ShutDowN mode, draining microampere, a must for a standalone beacon to leave ontop of some hill. As added bonus everything is restarted as the first time, and this help in avoiding possible locks or "software failures", after the tx is done the system goes in sleep mode, and after 8 seconds everything is raised up and resetted.
 If you wanna change the morse timing you must edit the "src/morse/morse.cpp" file, exactly here:
 
+```javascript
 // configurable params
 #define UNITSIZE_IN_MS (150)
 #define WARMUP_PAUSE_IN_MS (3000)
 #define ENDOFTEXT_PAUSE_IN_MS (3000)
 #define LONG_RETRY_PAUSE_IN_MS (1000)
 #define LONG_CARRIER_DURATION_IN_MS (4000)
+```
 
 UNITSIZE_IN_MS is the duration of a dot, the program automatically calculate the lenght of a line, the other parameters are self explanatory, only WARMUP_PAUSE_IN_MS need an explanation. Changing this you change the period where the Si4463 is in tx mode but without actually transmitting anything, and is used for a kind of "warmup of the valves" :-) The effect on the drift isn't so great as you can expect, the real problem in this board is the cheap crystal oscillator who is greatly inaccurate and suffer a lot the temperature changes, if you have the possibility change it with a tcxo smd quartz, you can buy it with a bunch of cents....or use the putty to thermically stabilize it as much as you can as i've done :-))
 
 To avoid problems and use of logic level shifter, the entire system will be powered @3.3V, this comes in handy for a lot of things, and with only two AA batteries you can have a lot of hours of activity, this are the measured current drain of the entire system, i've used 2 NiMH batteries so @2.8V :
 
+```javascript
 sleep mode     4mA
 wakeup         8mA
 tx in warmup  ~20mA
 tx "keydown"  ~47mA
+```
 
 This is the schematic:
 

@@ -1,7 +1,7 @@
 # Si4463-CW-Beacon
 A simple CW beacon forked from Alexander Sholohov RA9YER 
 
-Please refer to https://github.com/alexander-sholohov/si4463-beacon for infos about using WDS from SiLabs to change tx frequency.
+Please refer to [Alexander Sholohov GitHub](https://github.com/alexander-sholohov/si4463-beacon) for infos about using WDS from SiLabs to change tx frequency.
 This is a slightly modified version, i've just added a pair of features that IZ5MMH Stefano, a friend of mine, asked for his proper beacon. Now arduino goes to sleep in the inactivity period, and put to sleep the Si4463 breakout module too.
 So i've added a Sleep() function "stolen" from nickgammon website to put arduino in sleep mode for 8 seconds, the maximum you can reach without add more code lines, and i've connected the Si4463 SDN pin to D2, to have the possibility to raise it up.
 When you raise SDN at HIGH logical level the chip goes in ShutDowN mode, draining microampere, a must for a standalone beacon to leave ontop of some hill. As added bonus everything is restarted as the first time, and this help in avoiding possible locks or "software failures", after the tx is done the system goes in sleep mode, and after 8 seconds everything is raised up and resetted.

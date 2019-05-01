@@ -34,7 +34,7 @@ This is the schematic:
 ![thebeacon](https://github.com/IU5HKU/Si4463-CW-Beacon/blob/master/img/layout.jpg)
 
 and this is my realization, nothing of professional as you can see, but fully functional :-), Stefano think to leave the beacon ontop a near hill, 630m asl, with battery and a small solar panel to charge it....just for fun, we don't expect a lot from such tiny transmitter, it's just an experiment :-)
-To obtain a better stability and avoid as much as possibile the frequency drift, i've put some putty over the breakout board, the same used for the glass on the old wooden windows, cheap and dirty, but it does his job quite well.
+To obtain a better stability and avoid as much as possibile the frequency drift, i've placed some putty over the breakout board, the same used for the glass on the old wooden windows, cheap and dirty, but it does his job quite well.
 
 ![thebeacon](https://github.com/IU5HKU/Si4463-CW-Beacon/blob/master/img/Beacon.jpg)
 

@@ -27,7 +27,8 @@ tx "warmup"   ~20mA
 tx "keydown"  ~47mA
 ```
 
-!WARNING: Powering Arduino from his 5V pin bypass the voltage regulator, so ensure to use the proper voltage here, and once more !WARNING: the Si4463 module ISN'T 5V tolerant, so use only 3.3V to power it up, i've choose to use 3.3V for both the boards, Arduino doesn't complain about this :-) you can read a lot of interesting things about that question on the great [Nick Gammon Forum](http://www.gammon.com.au/welcome.html), an invaluable source of infos for the makers...
+#!WARNING! Powering Arduino from his 5V pin bypass the voltage regulator, so ensure to use the proper voltage here, and once more 
+#!WARNING! the Si4463 module ISN'T 5V tolerant, so use only 3.3V to power it up, i've choose to use 3.3V for both the boards, Arduino doesn't complain about this :-) you can read a lot of interesting things about that question on the great [Nick Gammon Forum](http://www.gammon.com.au/welcome.html), an invaluable source of infos for the makers...
 
 This is the schematic:
 

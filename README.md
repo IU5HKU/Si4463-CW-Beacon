@@ -1,4 +1,4 @@
-# Si4463-CW-Beacon
+# Si4463 UHF CW Beacon
 A simple CW beacon forked from Alexander Sholohov RA9YER 
 
 Please refer to [Alexander Sholohov GitHub](https://github.com/alexander-sholohov/si4463-beacon) for infos about using WDS from SiLabs to change tx frequency. 

@@ -37,3 +37,5 @@ and this is my realization, nothing of professional as you can see, but fully fu
 To obtain a better stability and avoid as much as possibile the frequency drift, i've put some putty over the breakout board, the same used for the glass on the old wooden windows, cheap and dirty, but it does his job quite well.
 
 ![thebeacon](https://github.com/IU5HKU/Si4463-CW-Beacon/blob/master/img/Beacon.jpg)
+
+just two last words, the "L" onboard arduino led is used to visually replicate the morse code you choose to send on the air, i've added a second led connected to D12, i've called this line EXTERNAL LED, just to replicate the morse code in a visible led outside the box....just in case you choose to put everything in a small plastic or aluminium projects box....

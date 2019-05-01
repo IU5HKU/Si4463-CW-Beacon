@@ -18,7 +18,7 @@ If you wanna change the morse timing you must edit the "src/morse/morse.cpp" fil
 
 UNITSIZE_IN_MS is the duration of a dot, the program automatically calculate the lenght of a line, the other parameters are self explanatory, only WARMUP_PAUSE_IN_MS need an explanation. Changing this you change the period where the Si4463 is in tx mode but without actually transmitting anything, and is used for a kind of "warmup of the valves" :-) The effect on the drift isn't so great as you can expect, the real problem in this board is the cheap crystal oscillator who is greatly inaccurate and suffer a lot the temperature changes, if you have the possibility change it with a tcxo smd quartz, you can buy it with a bunch of cents....or use the putty to thermically stabilize it as much as you can as i've done :-))
 
-To avoid problems and use of logic level shifter, the entire system will be powered @3.3V, this comes in handy for a lot of things, and with only two AA batteries you can have a lot of hours of activity, this are the measured current drain of the entire system, i've used 2 NiMH batteries so @2.8V :
+To avoid problems and use of logic level shifter, **the entire system will be powered @3.3V**, this comes in handy for a lot of things, and with only two AA batteries you can have a lot of hours of activity, this are the measured current drain of the entire system, i've used 2 NiMH batteries so @2.8V :
 
 ```javascript
 sleep mode     4mA
@@ -27,8 +27,7 @@ tx "warmup"   ~20mA
 tx "keydown"  ~47mA
 ```
 
-#!WARNING! Powering Arduino from his 5V pin bypass the voltage regulator, so ensure to use the proper voltage here, and once more 
-#!WARNING! the Si4463 module ISN'T 5V tolerant, so use only 3.3V to power it up, i've choose to use 3.3V for both the boards, Arduino doesn't complain about this :-) you can read a lot of interesting things about that question on the great [Nick Gammon Forum](http://www.gammon.com.au/welcome.html), an invaluable source of infos for the makers...
+**!WARNING!** Powering Arduino from his 5V pin bypass the voltage regulator, so ensure to use the proper voltage here, and once more **!WARNING!** the Si4463 module ISN'T 5V tolerant, so use only 3.3V to power it up, i've choose to use 3.3V for both the boards, Arduino doesn't complain about this :-) you can read a lot of interesting things about that question on the great [Nick Gammon Forum](http://www.gammon.com.au/welcome.html), an invaluable source of infos for the makers...
 
 This is the schematic:
 
